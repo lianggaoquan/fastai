@@ -1,4 +1,4 @@
-!pip install fastai
+!pip install fastai==0.7.0
 !apt-get -qq install -y libsm6 libxext6 && pip install -q -U opencv-python
 import cv2
 from os import path
@@ -9,7 +9,7 @@ accelerator = 'cu80' if path.exists('/opt/bin/nvidia-smi') else 'cpu'
 
 !pip install -q http://download.pytorch.org/whl/{accelerator}/torch-0.3.0.post4-{platform}-linux_x86_64.whl torchvision
 import torch
-!pip install Pillow==4.0.0
+!pip install Pillow==4.1.1
 !pip install image
 %matplotlib inline
 from fastai.imports import *
